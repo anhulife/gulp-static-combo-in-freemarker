@@ -1,0 +1,1 @@
+<@jsCombo file=['a.js', 'b.js']/>

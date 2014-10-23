@@ -1,0 +1,35 @@
+{
+	"name": "gulp-static-combo-in-freemarker",
+	"version": "0.0.1",
+	"description": "A gulp plugin for combo static file in freemarker",
+	"license": "MIT",
+	"keywords": [
+		"combo",
+		"static",
+		"gulpplugin"
+	],
+	"author": {
+		"name": "anhulife",
+		"email": "anhulife@gmail.com"
+	},
+	"homepage": "https://github.com/anhulife/gulp-static-combo-in-freemarker",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:anhulife/gulp-static-combo-in-freemarker.git"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"files": [
+		"index.js"
+	],
+	"dependencies": {
+		"gulp-util": "^3.0.0",
+		"through2": "^0.5.1"
+	},
+	"devDependencies": {
+		"concat-stream": "^1.4.6",
+		"gulp": "^3.8.7",
+		"mocha": "*"
+	}
+}
