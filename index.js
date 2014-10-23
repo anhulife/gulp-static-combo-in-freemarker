@@ -5,6 +5,7 @@ var fs = require('fs');
 var crypto = require('crypto');
 var gutil = require('gulp-util');
 var through = require('through2');
+var mkdirp = require('mkdirp');
 var EOL = require('os').EOL;
 
 module.exports = function (options) {
@@ -38,6 +39,8 @@ module.exports = function (options) {
 		content = buffer.join(EOL);
 
 		name = sha1(content) + (/\.js$/.test(files[0].path) ? '.js' : '.css');
+
+		mkdirp.sync(destAbsolute);
 
 		fs.writeFileSync(path.join(destAbsolute, name), content);
 
