@@ -1,6 +1,6 @@
 {
 	"name": "gulp-static-combo-in-freemarker",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A gulp plugin for combo static file in freemarker",
 	"license": "MIT",
 	"keywords": [
