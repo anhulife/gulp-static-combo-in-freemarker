@@ -31,6 +31,7 @@ module.exports = function (options) {
 		var buffer = [];
 		var content;
 		var name;
+		var fullPath;
 
 		files.forEach(function (file) {
 			buffer.push(String(file.contents));
@@ -40,9 +41,13 @@ module.exports = function (options) {
 
 		name = sha1(content) + (/\.js$/.test(files[0].path) ? '.js' : '.css');
 
-		mkdirp.sync(destAbsolute);
+		fullPath = path.join(destAbsolute, name);
 
-		fs.writeFileSync(path.join(destAbsolute, name), content);
+		if(!fs.existsSync(fullPath)){
+			mkdirp.sync(destAbsolute);
+
+			fs.writeFileSync(path.join(destAbsolute, name), content);
+		}
 
 		return name;
 	}
