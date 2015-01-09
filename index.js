@@ -24,7 +24,7 @@ module.exports = function (options) {
 	function sha1(content) {
 		return crypto.createHash('md5')
 			.update(content)
-			.digest('hex');
+			.digest('hex').slice(-7);
 	}
 
 	function concat(files) {
@@ -39,7 +39,7 @@ module.exports = function (options) {
 
 		content = buffer.join(EOL);
 
-		name = sha1(content) + (/\.js$/.test(files[0].path) ? '.js' : '.css');
+		name = 'combo_' + sha1(content) + (/\.js$/.test(files[0].path) ? '.js' : '.css');
 
 		fullPath = path.join(destAbsolute, name);
 
@@ -79,7 +79,7 @@ module.exports = function (options) {
 				return macro.replace(macroArgReg, function (macroArg, macroArgName) {
 					var paths = macroArg.match(macroArgValueReg);
 
-					if (paths.length > 1) {
+					if (paths.length > 0) {
 						paths = paths.map(function (path) {
 							return path.replace(/(\'|\")/g, '');
 						});

@@ -1,1 +1,1 @@
-<@combo file=['a.js']/>
+<@combo file=['a.js'] fileCombo="build/combo_999f421.js"/>

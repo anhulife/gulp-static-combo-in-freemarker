@@ -1,1 +1,1 @@
-<@jsCombo file=['a.js', 'b.js'] fileCombo="build/2a4050d061337a61fb899b1a3bbad894.js"/>
+<@jsCombo file=['a.js', 'b.js'] fileCombo="build/combo_bbad894.js"/>
