@@ -17,8 +17,8 @@ module.exports = function (options) {
 	var macroName = options.macroName || ['combo'];
 	var macroArg = options.macroArg || ['js', 'css'];
 	var macroReg = new RegExp('<@(?:' + macroName.join('|') + ')[\\s\\S]*?>', 'gim');
-	var macroArgReg = new RegExp('(' + macroArg.join('|') + ')\\s*=\\s*\\[(?:\\s*(?:[\'\"][\\w\\/\\.]+[\'\"])\\s*\\,?\\s*)+\\]', 'gim');
-	var macroArgValueReg = new RegExp('[\'\"]([\\w\\/\\.]+?)[\'\"]', 'g');
+	var macroArgReg = new RegExp('(' + macroArg.join('|') + ')\\s*=\\s*\\[(?:\\s*(?:[\'\"][\\w\\/\\.\\_\\-]+[\'\"])\\s*\\,?\\s*)+\\]', 'gim');
+	var macroArgValueReg = new RegExp('[\'\"]([\\w\\/\\.\\_\\-]+?)[\'\"]', 'g');
 	var contents;
 
 	function sha1(content) {

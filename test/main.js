@@ -74,4 +74,8 @@ describe('gulp-static-combo-in-freemarker', function () {
 	it('multi-macro', function (done) {
 		compare('multi-macro.ftl', 'multi-macro.ftl', done);
 	});
+
+	it('combo-special-characters-named-file', function (done) {
+		compare('combo-special-characters-named-file.ftl', 'combo-special-characters-named-file.ftl', done);
+	});
 });
